@@ -12,7 +12,7 @@
             .containerForm{
                 display: flex;
                 justify-content: center;
-                padding: 5%;
+                padding: 2%;
                 background: #80808038;
             }
             form{
@@ -30,6 +30,15 @@
                 height: 85px;
                 display: flex;
                 align-items: center;
+            }
+            #generar{
+                background: #BC955C;
+            }
+            #menu{
+                margin-right: 20px;
+            }
+            .menu:hover{
+                background: #BC955C;
             }
         </style>
     </head>
@@ -121,7 +130,7 @@
                     <div class="mt-6 flex items-center justify-end gap-x-6">
                         <button type="button" class="rounded-md  px-3 py-2 text-sm font-semibold leading-6 text-gray-900">Cancelar</button>
                         <button type="button" class="rounded-md  px-3 py-2 text-sm font-semibold leading-6 text-gray-900">Guardar</button>
-                        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Generar</button>
+                        <button id="generar" type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Generar</button>
                     </div>
                 </div>
             </form>
