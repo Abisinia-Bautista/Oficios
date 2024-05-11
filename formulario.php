@@ -25,9 +25,18 @@
                 background-color: #6A1C32;
                 color: white;
             }
+            .bg-gray-800{
+                background: #6A1C32;
+                height: 85px;
+                display: flex;
+                align-items: center;
+            }
         </style>
     </head>
     <body>
+        <?php 
+            include './header.php';
+        ?>
         <div class="containerForm">
             <form>
                 <div class="space-y-12">
