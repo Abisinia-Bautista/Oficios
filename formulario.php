@@ -95,7 +95,7 @@
                                                 <span>Cargar Archivo</span>
                                                 <input id="file-upload" name="file-upload" type="file" class="sr-only">
                                             </label>
-                                            <p class="pl-1">en format:o</p>
+                                            <p class="pl-1">en format:</p>
                                         </div>
                                         <p class="text-xs leading-5 text-gray-600">PNG o JPG</p>
                                     </div>
