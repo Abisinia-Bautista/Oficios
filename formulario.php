@@ -26,19 +26,24 @@
                 color: white;
             }
             .bg-gray-800{
-                background: #6A1C32;
+                background: white;
                 height: 85px;
                 display: flex;
                 align-items: center;
             }
             #generar{
-                background: #BC955C;
+                background: #b17a45;
             }
-            #menu{
+            .menu{
                 margin-right: 20px;
+                color: white;
+                font-size: 15px;
             }
             .menu:hover{
-                background: #BC955C;
+                background: #b17a45;
+            }
+            .bg-white{
+                background-color: #6A1C32;
             }
         </style>
     </head>
