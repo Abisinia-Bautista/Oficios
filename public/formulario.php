@@ -36,11 +36,6 @@
         .bg-gold {
             background-color: rgb(177, 122, 69);
         }
-
-
-
-
-
         .bg-3f3f3d {
             background-color: #3f3f3d;
 
@@ -110,30 +105,14 @@
             margin-top: 20px;
             width: 48%;
         }
-        #agregar{
-            background:#b17a45;
-            color: #EEEEEE;
-        }
+       
         .contenidos{
             width: 60%;
         }
-        .editor-container {
-            width: auto;
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+        
         .toolbar {
             margin-bottom: 10px;
             border-bottom: 1px solid #ccc;
-        }
-        .editor {
-            width: 100%;
-            height: 300px;
-            border-radius: 5px;
-            overflow-y: auto;
-            white-space: pre-wrap;
         }
         .toolbar button {
             margin-right: 5px;
@@ -146,111 +125,22 @@
         .toolbar button:hover {
             background-color: #e0e0e0;
         }
-        .editor:focus, .editor:active{
-            border-color: white;
-            border-radius: 5px;
-            outline: none;
-        }
-        .opciones {
-            display: inline-block;
-            margin-right: 10px;
-            text-align: center;
-            margin-left: 25px;
-            /* border: 2px solid;
-            border-radius: 20px; */
-        }
-        .opciones:hover{
-            /* background-color: yellow; */
-            border: 2px solid;
-            border-radius: 20px;
-            border-color: #b17a45;
-            color: #b17a45;
-            width: 250px;
-        }
         img{
             border-radius: 20px 20px 0px 0px;
         }
-        
-        /* input[type="radio"] {
-            display: none; /* Ocultar los botones de radio */
-        /* }  */
         input[type="radio"]:checked + label {
             border: 2px solid blue;
-        }
-        .opc {
-            display: block;
-            cursor: pointer;
-        }
-        #envFormato{
-            margin: 30px;
-            width: 20%;
-            background: #6a1c32;
-            color: white;
-            font-size: 17px;
-            border-radius: 50px;
-            height: 40px;
-        }
-        #autocomplete-list {
-            border: 1px solid #ccc;
-            background-color: #fff;
-            max-height: 200px;
-            overflow-y: auto;
-            display: none;
-            position: absolute;
-            width: 40%;
-        }
-        #autocomplete-list div {
-            padding: 10px;
-            cursor: pointer;
-        }
-        #autocomplete-list div:hover {
-            background-color: #f0f0f0;
-        }
-        #principal{
-            text-align: -webkit-center;
-            padding: 3%;
-            display: flex;
-            width: 100%;
-            height: 100%;
-            /* position: fixed; */
-            /* top: 60px; */
-            right: 0;
-            /* bottom: -100px; */
-            /* margin-bottom: 100px; */
-        }
-        #opcionesFormato{
-            width: 100%;
-            /* margin-top: 50px; */
-        }
-        .opcMenu{
-            color: white;
-            font-size: 20px;
-            margin: 20px;
-        }
-        .opcMenu:hover{
-            color: #b17a45;
-            text-decoration: underline;
         }
         .cambioColor{
             color: #fff;
             text-decoration: none;
             font-size: 18px;
         }
-        /* .footer-line-yellow{
-            height: 5px;
-            background: #b17a45;
-        } */
         a{
             text-decoration: none;
         }
         a:hover{
             color: #b17a45;
-        }
-        .botones:hover{
-            color: #b17a45;
-        }
-        #opcion1, #opcion2, #opcion3{
-            height: 20px;
         }
         
         
@@ -261,7 +151,7 @@
         <div id="contenedor"  style=" height: 100%; margin-bottom: 50px;">
             <div id="formulario" class="contenidos" >
                 <h2 style="text-align: center; color:#b17a45;" >Formulario para Oficios</h2>
-                <form id="FormOficio"  method="POST" action="example_051.php">
+                <form id="FormOficio"  method="POST" action="genera.php">
                     <div >
                         <label for="oficio">No. Oficio:</label>
                         <input type="text" id="oficio" name="oficio"  required placeholder="Numero de Oficio">
@@ -272,7 +162,7 @@
                     </div>
                     <div >
                         <label for="corresponde">A quien va Dirigido:</label>
-                        <input type="text" id="corresponde" name="corresponde" required placeholder="Ingrese nombre completo" autocomplete="off">
+                        <input type="text" id="corresponde" name="corresponde" required placeholder="Ingrese nombre completo">
                     </div>
                     <div >
                         <label for="cargo">Cargo:</label>
