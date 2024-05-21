@@ -193,8 +193,8 @@
                         <input type="text" id="entidad" name="entidad" value="DIRECTOR GENERAL DE LA AGENCIA DIGITAL DEL ESTADO DE BAJA CALIFORNIA" required placeholder="Cargo de quien firma">
                     </div> 
                     <div>
-                        <input id="enviar2" type="submit" value="Guardar PDF" >
-                        <input id="enviar" type="submit" value="Generar PDF" onclick="guardarDatos()" >
+                        <input id="enviar2" type="button" value="Guardar PDF" onclick="guardarDatos()" >
+                        <input id="enviar" type="submit" value="Generar PDF" >
                     </div>
                 </form>
             </div>
@@ -317,7 +317,7 @@ function guardarDatos() {
 
         var xhr = new XMLHttpRequest();
 
-        xhr.open("POST", "bd.php", true);
+        xhr.open("POST", "./config/guardarDatos.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 

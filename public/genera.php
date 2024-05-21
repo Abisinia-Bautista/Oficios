@@ -4,7 +4,6 @@
 //require_once('tcpdf_include.php');
 
 require_once(__DIR__ . '/../vendor/tecnickcom/tcpdf/examples/tcpdf_include.php');
-require('');
 
 
 // Extend the TCPDF class to create custom Header and Footer
@@ -45,7 +44,7 @@ class MYPDF extends TCPDF {
 		$this->setAutoPageBreak(false, 0);
 		// set bacground image
 		//$img_file = K_PATH_IMAGES.'aguilaC.jpg';
-        $img_file = K_PATH_IMAGES.'';
+        $img_file = __DIR__ . '/../public/img/aguilaC.jpg';
 		$this->Image($img_file, null, 0, 210, 297, '', '', '', false, 300, 'C', false, false, 0);
 		$this->Cell(0, 15, '', 0, false, 'E', 0, '', 0, false, 'M', 'M');
 		// restore auto-page-break status
@@ -92,7 +91,7 @@ class MYPDF extends TCPDF {
 		// set image scale factor
 		$this->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
-		$imageFile = './images/numAzul.png';
+	
 		// set some language-dependent strings (optional)
 		if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 			require_once(dirname(__FILE__).'/lang/eng.php');
@@ -115,10 +114,9 @@ class MYPDF extends TCPDF {
 		$this->MultiCell(75, 25, "\n".'Agencia Digital del Estado de Baja California'."\n".$txt."\n". 'Asunto: '. $this->asunto, 1, 'R', 1, 2, '120' ,'15', true);
 		$this->Ln(2);
 		$this->SetFont('times', '', 10);
-		$html = '<div style="font-size:14px; font-style: italic;">
-					<label>'.$this->lema.'</label><br/>
-				</div>';
-		$this->writeHTML($html, true, false, true, false, '');
+
+        $this->MultiCell(68, 0, $this->lema, 0, 'L', 1, 0, '', '', true);
+        $this->Ln(1);
 	
 		/* 					SE OBTIENE LA FECHA CON FORMATO EN ESPAÑOL PARA EL MES */
 		$day = date('d');
@@ -133,7 +131,7 @@ class MYPDF extends TCPDF {
 
 		/* 					FECHAAAA */
 		$html = '<div style="font-size:14px; font-weight:bold; text-align:right;">
-					<h3>Tijuana B.C a '.$day. ' de '. $mesNombre . ' de '. $year .'</h3>
+					<h3>Tijuana B.C a '.($day-1). ' de '. $mesNombre . ' de '. $year .'</h3>
 				</div>';
 		$this->writeHTML($html, true, false, true, false, '');
 
@@ -146,12 +144,6 @@ class MYPDF extends TCPDF {
 				</div>';
 		$this->writeHTML($html, true, false, true, false, '');
 
-		/* 					CONTENIDO DEL OFICIO */
-
-		// padding del contenido
-		// $this->setCellPaddings(1, 1, 1, 1);
-
-		// margin del contenido
 		$this->setCellMargins(1, 1, 1, 1);
 
 		$html = '<div style="text-align: justify; font-size:15px;">
@@ -162,7 +154,7 @@ class MYPDF extends TCPDF {
 		/* 					FIRMA DE GABRIEL PALOMBO */
 		$html = '<div style="font-size:12px; font-weight:bold; text-align: center; display: grid; justify-content: center; align-items:center;">
 					<label>ATENTAMENTE</label><br/><br/>
-					<img src="./images/firma.png" style="width:100px; height:100px; text-align: center"><br/>
+					<img src="./img/firma.png" style="display: inline-block; width:100px; height:100px; text-align: center;"><br/>
 					<label>'.strtoupper($this->firma).'</label><br/>
 					<label>'.strtoupper($this->entidad).'</label>
 				</div>';
